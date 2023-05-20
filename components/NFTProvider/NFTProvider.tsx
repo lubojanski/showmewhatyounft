@@ -27,10 +27,9 @@ const NFTProvider = ({ children }: { children: ReactNode }) => {
     queryFn: async () => {
       const res = await fetch(
         // TODO: use env variable
-        `https://eth-mainnet.g.alchemy.com/nft/v3/4PMQVTSudayFFTs2N7HX7ndO-qIS9dk8/getNFTsForOwner?owner=0x154B4045F07B48C3B75D73a3f6C7C11Dfec95b4a&withMetadata=true&pageSize=100`
+        `https://eth-mainnet.g.alchemy.com/nft/v3/${process.env.NEXT_PUBLIC_ALCHEMY_ID}/getNFTsForOwner?owner=0x154B4045F07B48C3B75D73a3f6C7C11Dfec95b4a&withMetadata=true&pageSize=100`
       );
       const json: ApiResponse = await res.json();
-      console.log("json :", json);
       const filteredNftsWithPosition = json.ownedNfts.reduce((acc, nft) => {
         if (nft.image.originalUrl) {
           acc.push({

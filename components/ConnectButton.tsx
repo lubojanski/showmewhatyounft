@@ -1,4 +1,5 @@
 import { InjectedConnector } from "@wagmi/core";
+import { useEffect } from "react";
 import { useAccount, useConnect } from "wagmi";
 
 const ConnectButton = () => {
@@ -6,6 +7,12 @@ const ConnectButton = () => {
   const { connect } = useConnect({
     connector: new InjectedConnector(),
   });
+
+  useEffect(() => {
+    if (!isConnected) {
+      connect();
+    }
+  }, [isConnected, connect]);
 
   if (isConnected) {
     return null;

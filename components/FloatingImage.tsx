@@ -31,7 +31,6 @@ const FloatingImage = ({
       // @ts-ignore
       meshRef.current.material.opacity = newOpacity;
       opacityRef.current = newOpacity;
-      console.log("opacityRef.current :", opacityRef.current);
     }
 
     const elapsedTime = state.clock.getElapsedTime();
