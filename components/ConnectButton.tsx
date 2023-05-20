@@ -8,12 +8,6 @@ const ConnectButton = () => {
     connector: new InjectedConnector(),
   });
 
-  useEffect(() => {
-    if (!isConnected) {
-      connect();
-    }
-  }, [isConnected, connect]);
-
   if (isConnected) {
     return null;
   }
