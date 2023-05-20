@@ -1,5 +1,5 @@
 "use client";
-import { Canvas } from "react-three-fiber";
+import { Canvas } from "@react-three/fiber";
 import Scene from "./Scene";
 import { Suspense } from "react";
 import ConnectButton from "../ConnectButton";

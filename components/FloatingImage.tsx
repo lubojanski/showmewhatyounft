@@ -1,7 +1,7 @@
 "use client";
 
 import React, { memo, useRef } from "react";
-import { useFrame, useLoader } from "react-three-fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { Mesh } from "three";
 
