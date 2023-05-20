@@ -8,3 +8,10 @@ export const NFTActionsContext = createContext<
 export const NFTStateContext = createContext<NFTStateContextValue | undefined>(
   undefined
 );
+
+const contexts = {
+  NFTActionsContext,
+  NFTStateContext,
+};
+
+export default contexts;
