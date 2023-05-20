@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NFTActionsContext, NFTStateContext } from "./contexts";
+import { NFTActionsContext, NFTStateContext } from "./Contexts";
 import { NFTActionsContextValue, NFTStateContextValue } from "./types";
 
 export * from "./types";

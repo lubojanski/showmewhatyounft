@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { ReactNode, useMemo, useReducer } from "react";
 import { useAccount } from "wagmi";
-import { NFTActionsContext, NFTStateContext } from "./contexts";
+import { NFTActionsContext, NFTStateContext } from "./Contexts";
 import {
   ApiResponse,
   NFTActionType,
